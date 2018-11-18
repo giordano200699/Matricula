@@ -23,7 +23,10 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::get('/home', function (Request $request) {
     	return view('home');
 	});
-	Route::get('/documentos', function (Request $request) {
+	Route::get('/admin/documentos', function (Request $request) {
+    	return view('logeado.RegistrarDocumento');
+	});
+	Route::get('/admin/usuarios', function (Request $request) {
     	return view('logeado.RegistrarDocumento');
 	});
 });
