@@ -26,9 +26,12 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::get('/admin/documentos', function (Request $request) {
     	return view('logeado.RegistrarDocumento');
 	});
-	Route::get('/admin/usuarios', function (Request $request) {
-    	return view('logeado.RegistrarDocumento');
-	});
+	Route::get('/admin/alumnos', 'CAlumnos@mostrarAlumnos');
+	Route::get('/admin/alumnos/crear','CAlumnos@crearAlumno');
+	Route::post('/admin/alumnos/creando','CAlumnos@creandoAlumno');
+	Route::post('/admin/alumnos/eliminar','CAlumnos@eliminarAlumno');
+	Route::get('/admin/alumnos/editar/{id}','CAlumnos@editarAlumno');
+	Route::post('/admin/alumnos/editando/{id}','CAlumnos@editandoAlumno');
 });
 // Route::middleware('auth:auth')->get('/home', function (Request $request) {
 //     return view('home');

@@ -32,6 +32,12 @@
                 <a class="nav-link" href="{{url('admin/documentos')}}">Documentos</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="{{url('admin/alumnos')}}">Mostrar Alumnos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('admin/alumnos/crear')}}">Crear Alumno</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
               </li>
               <li class="nav-item">
