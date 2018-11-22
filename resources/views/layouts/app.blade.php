@@ -38,10 +38,10 @@
                 <a class="nav-link" href="{{url('admin/alumnos/crear')}}">Crear Alumno</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="{{url('admin/tipoDocumentos')}}">Tipo de Documentos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link" href="{{url('admin/tipoDocumentos/crear')}}">Crear Tipo de Documento</a>
               </li>
             </ul>
         </nav>
