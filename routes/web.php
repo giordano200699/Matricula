@@ -46,6 +46,9 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::post('/admin/gradosAcademicos/eliminar','CGradoAcademico@eliminarGradoAcademico');
 	Route::get('/admin/gradosAcademicos/editar/{id}','CGradoAcademico@editarGradoAcademico');
 	Route::post('/admin/gradosAcademicos/editando/{id}','CGradoAcademico@editandoGradoAcademico');
+
+	Route::get('/admin/documentos','CDocumento@mostrarDocumentos');
+	Route::get('/admin/documentos/crear','CDocumento@crearDocumento');
 });
 // Route::middleware('auth:auth')->get('/home', function (Request $request) {
 //     return view('home');

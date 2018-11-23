@@ -49,6 +49,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{url('admin/gradosAcademicos/crear')}}">Crear Grado Académico</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('admin/documentos')}}">Documentos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('admin/documentos/crear')}}">Crear Documentos</a>
+              </li>
             </ul>
         </nav>
 
