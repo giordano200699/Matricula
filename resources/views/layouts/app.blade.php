@@ -43,6 +43,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{url('admin/tipoDocumentos/crear')}}">Crear Tipo de Documento</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('admin/gradosAcademicos')}}">Grados Académicos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('admin/gradosAcademicos/crear')}}">Crear Grado Académico</a>
+              </li>
             </ul>
         </nav>
 

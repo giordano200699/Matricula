@@ -39,6 +39,13 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::post('/admin/tipoDocumentos/eliminar','CTipoDocumento@eliminarTipoDocumento');
 	Route::get('/admin/tipoDocumentos/editar/{id}','CTipoDocumento@editarTipoDocumento');
 	Route::post('/admin/tipoDocumentos/editando/{id}','CTipoDocumento@editandoTipoDocumento');
+
+	Route::get('/admin/gradosAcademicos','CGradoAcademico@mostrarGradosAcademicos');
+	Route::get('/admin/gradosAcademicos/crear','CGradoAcademico@crearGradoAcademico');
+	Route::post('/admin/gradosAcademicos/creando','CGradoAcademico@creandoGradoAcademico');
+	Route::post('/admin/gradosAcademicos/eliminar','CGradoAcademico@eliminarGradoAcademico');
+	Route::get('/admin/gradosAcademicos/editar/{id}','CGradoAcademico@editarGradoAcademico');
+	Route::post('/admin/gradosAcademicos/editando/{id}','CGradoAcademico@editandoGradoAcademico');
 });
 // Route::middleware('auth:auth')->get('/home', function (Request $request) {
 //     return view('home');

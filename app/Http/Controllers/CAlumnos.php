@@ -23,7 +23,6 @@ class CAlumnos extends Controller
     }
     public function crearAlumno(){
         return view('alumnos.crear');
-
     }
     public function creandoAlumno(Request $request)
     {

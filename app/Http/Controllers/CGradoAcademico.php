@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\TipoDocumento as TipoDocumento; 
+use App\GradoAcademico as GradoAcademico; 
 use Redirect;
 
-class CTipoDocumento extends Controller
+class CGradoAcademico extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,45 +15,47 @@ class CTipoDocumento extends Controller
      */
     public function index()
     {
-        dd("Estoy en el index de tipo documento");
+        dd("entro al index");
     }
-    public function mostrarTipoDocumentos(){
-        $tipoDocumentos = TipoDocumento::all();
-        return view('tipoDocumentos.mostrar',["tipoDocumentos"=>$tipoDocumentos]);
+    public function mostrarGradosAcademicos(){
+        $gradosAcademicos = GradoAcademico::all();
+        return view('gradosAcademicos.mostrar',["gradosAcademicos"=>$gradosAcademicos]);
     }
-    public function crearTipoDocumento(){
-        return view('tipoDocumentos.crear');
+
+    public function crearGradoAcademico(){
+        return view('gradosAcademicos.crear');
     }
-    public function creandoTipoDocumento(Request $request)
+
+    public function creandoGradoAcademico(Request $request)
     {
         if($request->nombre!=null){
-            TipoDocumento::create([
+            GradoAcademico::create([
                 'nombre' => $request->nombre,
                 'descripcion' => $request->descripcion
             ]);
-            return redirect("admin/tipoDocumentos");
+            return redirect("admin/gradosAcademicos");
         }
         return "ERROR AL CREAR";
     }
-    public function eliminarTipoDocumento(Request $request)
+    public function eliminarGradoAcademico(Request $request)
     {
-        $tipoDocumento = TipoDocumento::find($request->id);
-        $tipoDocumento->delete();
-        return redirect("admin/tipoDocumentos");
+        $gradoAcademico = GradoAcademico::find($request->id);
+        $gradoAcademico->delete();
+        return redirect("admin/gradosAcademicos");
     }
-    public function editarTipoDocumento($id)
+    public function editarGradoAcademico($id)
     {
-        $tipoDocumento = TipoDocumento::find($id);
-        return view('tipoDocumentos.editar',["tipoDocumento"=>$tipoDocumento]);
+        $gradoAcademico = GradoAcademico::find($id);
+        return view('gradosAcademicos.editar',["gradoAcademico"=>$gradoAcademico]);
     }
-    public function editandoTipoDocumento(Request $request)
+    public function editandoGradoAcademico(Request $request)
     {
         if($request->nombre!=null){
-            $tipoDocumento = TipoDocumento::find($request->id);
-            $tipoDocumento->nombre=$request->nombre;
-            $tipoDocumento->descripcion=$request->descripcion;
-            $tipoDocumento->save();
-            return redirect("admin/tipoDocumentos");
+            $gradoAcademico = GradoAcademico::find($request->id);
+            $gradoAcademico->nombre=$request->nombre;
+            $gradoAcademico->descripcion=$request->descripcion;
+            $gradoAcademico->save();
+            return redirect("admin/gradosAcademicos");
         }
         return "ERROR AL EDITAR";
     }
