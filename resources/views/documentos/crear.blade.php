@@ -9,6 +9,8 @@
 			@csrf
 			<fieldset>
 				<legend>Crear Documento</legend>
+				<input type="hidden" id="idAlumno" name="idAlumno" value="{{$alumno->id}}">
+
 				<div class="form-group">
 			    	<label for="codigo">Codigo:</label>
 			    	<input type="text" class="form-control" name="codigo">

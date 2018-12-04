@@ -17,6 +17,8 @@ class CreateDocumentosTable extends Migration
             $table->increments('id');
             $table->integer('idTipoDocumento')->unsigned();;
             $table->foreign('idTipoDocumento')->references('id')->on('tipo_documentos');
+            $table->integer('idAlumno')->unsigned();
+            $table->foreign('idAlumno')->references('id')->on('alumnos');
             $table->string('codigo');
             $table->string('imgUrl')->nullable();
             $table->string('descripcion', 500)->nullable();
