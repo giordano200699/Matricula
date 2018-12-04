@@ -1,11 +1,11 @@
 @extends('layouts.base')
 
 @section('content')
-
-	<h1>HOLA MUNDO</h1>
+	
+	<div class="col-12"><h1>GRADOS DE DOCUMENTO</h1></div>
 
 	<table>
-		<caption>Mostrar Grados Académicos</caption>
+		<!--<caption>Mostrar Grados Académicos</caption>-->
 		<colgroup>
 			
 		</colgroup>

@@ -1,11 +1,14 @@
 @extends('layouts.base')
 
 @section('content')
+	
+
+
 	<div class="col-6">
 		<form action="{{url('admin/documentos/creando')}}" method="POST" enctype="multipart/form-data" files="true">
 			@csrf
 			<fieldset>
-				<legend>Tipo de Documento</legend>
+				<legend>Crear Documento</legend>
 				<div class="form-group">
 			    	<label for="codigo">Codigo:</label>
 			    	<input type="text" class="form-control" name="codigo">

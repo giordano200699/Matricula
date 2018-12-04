@@ -2,6 +2,7 @@
 
 @section('content')
 
+	
 	<form action="{{url('admin/alumnos/creando')}}" method="POST">
 		@csrf
 		<fieldset>
