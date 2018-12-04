@@ -5,7 +5,7 @@
 	<form action="{{url('admin/alumnos/editando/'.$alumno->id)}}" method="POST">
 		@csrf
 		<fieldset>
-			<legend>Datos 1</legend>
+			<legend>{{$alumno->nombres}} {{$alumno->apePaterno}} {{$alumno->apeMaterno}}</legend>
 			<label>Nombres:</label>
 			<input type="text" name="nombres" value="{{$alumno->nombres}}">
 			<br/>

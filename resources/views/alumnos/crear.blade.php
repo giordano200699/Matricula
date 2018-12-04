@@ -5,7 +5,7 @@
 	<form action="{{url('admin/alumnos/creando')}}" method="POST">
 		@csrf
 		<fieldset>
-			<legend>Datos 1</legend>
+			<legend>Crear Alumno</legend>
 			<label>Nombres:</label>
 			<input type="text" name="nombres">
 			<br/>
@@ -21,6 +21,5 @@
 			<input type="submit" value="Enviar Datos">
 		</fieldset>
 	</form>
-	<p>Hola Mundo</p>
 
 @endsection
