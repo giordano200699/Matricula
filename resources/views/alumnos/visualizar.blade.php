@@ -56,9 +56,9 @@
 						<div class="col-4">
 						<div class="card" style="width: 18rem;">
 						  <img class="card-img-top" src="{{asset('imgPublications/'.$documento->imgUrl)}}" alt="Card image cap">
-						  <div class="card-body">
-						    <h5 class="card-title">Card title</h5>
-						    <a href="#" class="btn btn-primary">Go somewhere</a>
+						  <div class="card-body" style="text-align: center;">
+						    <h5 class="card-title">{{$documento->tipoDocumento->nombre." - ".$documento->codigo}}</h5>
+						    <a href="{{url('admin/documentos/visualizar/').'/'.$documento->id}}" class="btn btn-primary">Visualizar</a>
 						  </div>
 						</div>
 						</div>
