@@ -1,0 +1,37 @@
+.portfolio{
+    padding:6%;
+    text-align:center;
+}
+.heading{
+    background: #fff;
+    padding: 1%;
+    text-align: left;
+    
+}
+.heading img{
+    width: 10%;
+}
+.bio-info{
+    padding: 5%;
+    background:#fff;
+    
+}
+.name{
+    font-family: 'Charmonman', cursive;
+    font-weight:600;
+}
+.bio-image{
+    text-align:center;
+}
+.bio-image img{
+    border-radius:50%;
+}
+.bio-content{
+    text-align:left;
+    
+}
+.bio-content p{
+    margin-top:  0.5rem;
+    font-weight:0;
+    font-size:20px;
+}

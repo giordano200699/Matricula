@@ -2,34 +2,66 @@
 
 @section('content')
 
-<div class="profile-data">
-	<div class="col-md-3">
-  	<div class="col-md-12" align="center">
-        			<img class="img-responsive img-portfolio img-hover" src="img/profile.jpg">
-    </div>
-    <div class="col-md-12">
-			<p class="text-center"><strong>Nombres: </strong></p>
-	    <p class="text-center"><em>Apellidos: </em></p>
-      </div>
-    <div class="col-md-12 text-center">
-    	<!-- Redes sociales-->
-	    <ul class="list-unstyled list-inline list-social-icons">
-				<li>
-						<p>Codigo</p>
-				</li>
-				<li>
-						<p>Estado</p>
-				</li>
-			</ul>
-		<!-- Fin redes sociales -->
-		</div>
 
-
-
+<div class="container portfolio">
+	
+	<div class="bio-info">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="bio-image">
+							<img src="{{asset('imgPublications/images.png')}}" alt="image" />
+							<br>
+							<br>
+	
+						</div>			
+					</div>
+				</div>	
+			</div>
+			<div class="col-md-6">
+				<div class="bio-content">
+				
+				
+				<p><strong>Nombres: {{$alumno->nombres}} </strong></p>
+	   			 <p >Apellidos: {{$alumno->apePaterno}} </p>
+					<p>Codigo: {{$alumno->id}}</p>
+					<p>Estado: <font color="green"> Disponible</font> </p> 
+					<p>Correo: {{$alumno->correo}} </p>
+				</div>
+			</div>
+		</div>	
+	</div>
 </div>
 
+<!--<div class="profile-data">
+	<div class="col-md-3">
+  	<div class="col-md-12" align="center">
+        			<img class="img-responsive img-portfolio img-hover" src="{{asset('imgPublications/images.png')}}">
+    </div>
+    <div class="col-md-12">
+			<p class="text-center"><strong>Nombres: {{$alumno->nombres}} </strong></p>
+	    <p class="text-center"><em>Apellidos: {{$alumno->apePaterno}} </em></p>
+      </div>
+    <div class="col-md-12 text-center">-->
+    	<!-- Redes sociales
+	    <ul class="list-unstyled list-inline list-social-icons">
+				<li>
+						<p>Codigo: {{$alumno->id}}</p>
+				</li>
+				<li>
+						<p>Estado: </p> <font color="green"> Disponible</font>
+				</li>
+			</ul>
+		 Fin redes sociales 
+		</div>-->
 
 
+
+<!-- </div> -->
+
+
+	
 	<div class="col-12">
 		<a class="nav-link" href="{{url('admin/documentos/crear/').'/'.$alumno->id}}">Crear Documento</a>
 	</div>
