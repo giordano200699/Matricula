@@ -17,6 +17,8 @@ class CreateTipoDocumentosTable extends Migration
             $table->increments('id');
             $table->string('nombre', 150);
             $table->string('descripcion', 500)->nullable();
+            $table->integer('idGradoAcademico')->unsigned();;
+            $table->foreign('idGradoAcademico')->references('id')->on('grado_academicos');
             $table->timestamps();
         });
     }

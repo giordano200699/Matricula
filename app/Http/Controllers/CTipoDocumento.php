@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\TipoDocumento as TipoDocumento; 
+use App\GradoAcademico as GradoAcademico;
 use Redirect;
 
 class CTipoDocumento extends Controller
@@ -22,14 +23,16 @@ class CTipoDocumento extends Controller
         return view('tipoDocumentos.mostrar',["tipoDocumentos"=>$tipoDocumentos]);
     }
     public function crearTipoDocumento(){
-        return view('tipoDocumentos.crear');
+        $gradosAcademicos = GradoAcademico::all();
+        return view('tipoDocumentos.crear',["gradosAcademicos"=>$gradosAcademicos]);
     }
     public function creandoTipoDocumento(Request $request)
     {
         if($request->nombre!=null){
             TipoDocumento::create([
                 'nombre' => $request->nombre,
-                'descripcion' => $request->descripcion
+                'descripcion' => $request->descripcion,
+                'idGradoAcademico' => $request->idGradoAcademico
             ]);
             return redirect("admin/tipoDocumentos");
         }
@@ -52,6 +55,7 @@ class CTipoDocumento extends Controller
             $tipoDocumento = TipoDocumento::find($request->id);
             $tipoDocumento->nombre=$request->nombre;
             $tipoDocumento->descripcion=$request->descripcion;
+            $tipoDocumento->idGradoAcademico=$request->idGradoAcademico;
             $tipoDocumento->save();
             return redirect("admin/tipoDocumentos");
         }

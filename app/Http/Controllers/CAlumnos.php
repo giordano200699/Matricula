@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Alumno as Alumno; 
+use App\GradoAcademico as GradoAcademico; 
 use Redirect;
 
 class CAlumnos extends Controller
@@ -53,6 +54,12 @@ class CAlumnos extends Controller
     {
         $alumno = Alumno::find($id);
         return view('alumnos.editar',["alumno"=>$alumno]);
+    }
+    public function visualizarAlumno($id)
+    {
+        $alumno = Alumno::find($id);
+        $gradosAcademicos = GradoAcademico::all();
+        return view('alumnos.visualizar',["alumno"=>$alumno,"gradosAcademicos"=>$gradosAcademicos]);
     }
     public function editandoAlumno(Request $request)
     {

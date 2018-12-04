@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.base')
 
 @section('content')
 
@@ -18,6 +18,7 @@
 		      <th scope="col">Correo</th>
 		      <th>Editar</th>
 		      <th>Eliminar</th>
+		      <th>Visualizar</th>
 		    </tr>
 	  	</thead>
 	  	<tbody>
@@ -32,6 +33,7 @@
 			      <td><a href="{{url('admin/alumnos/editar/'.$alumno->id)}}">Editar</a></td>
 			      <td><form action="{{url('admin/alumnos/eliminar')}}" method="POST">
 	  			@csrf<input type="hidden" name="id" value="{{$alumno->id}}"><input type="submit" value="Eliminar"></form></td>
+	  			<td><a href="{{url('admin/alumnos/visualizar/'.$alumno->id)}}">Visualizar</a></td>
 			    </tr>
 	  		
 	  		@endforeach

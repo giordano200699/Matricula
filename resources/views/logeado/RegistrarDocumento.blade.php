@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.base')
 
 @section('content')
 <link href="{{ asset('css/formoid-solid-green.css') }}" rel="stylesheet">

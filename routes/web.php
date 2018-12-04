@@ -31,6 +31,7 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::post('/admin/alumnos/creando','CAlumnos@creandoAlumno');
 	Route::post('/admin/alumnos/eliminar','CAlumnos@eliminarAlumno');
 	Route::get('/admin/alumnos/editar/{id}','CAlumnos@editarAlumno');
+	Route::get('/admin/alumnos/visualizar/{id}','CAlumnos@visualizarAlumno');
 	Route::post('/admin/alumnos/editando/{id}','CAlumnos@editandoAlumno');
 
 	Route::get('/admin/tipoDocumentos','CTipoDocumento@mostrarTipoDocumentos');
@@ -49,6 +50,7 @@ Route::group(array('middleware' => 'auth'), function()
 
 	Route::get('/admin/documentos','CDocumento@mostrarDocumentos');
 	Route::get('/admin/documentos/crear','CDocumento@crearDocumento');
+	Route::post('/admin/documentos/creando','CDocumento@creandoDocumento');
 });
 // Route::middleware('auth:auth')->get('/home', function (Request $request) {
 //     return view('home');
