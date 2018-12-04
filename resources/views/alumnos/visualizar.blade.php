@@ -1,6 +1,33 @@
 @extends('layouts.base')
 
 @section('content')
+<div class="profile-data">
+	<div class="col-md-3">
+  	<div class="col-md-12" align="center">
+        			<img class="img-responsive img-portfolio img-hover" src="img/profile.jpg">
+    </div>
+    <div class="col-md-12">
+			<p class="text-center"><strong>Nombres: </strong></p>
+	    <p class="text-center"><em>Apellidos: </em></p>
+      </div>
+    <div class="col-md-12 text-center">
+    	<!-- Redes sociales-->
+	    <ul class="list-unstyled list-inline list-social-icons">
+				<li>
+						<p>Codigo</p>
+				</li>
+				<li>
+						<p>Estado</p>
+				</li>
+			</ul>
+		<!-- Fin redes sociales -->
+		</div>
+
+
+
+</div>
+
+
 	<div class="col-6">
 		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 			@foreach($gradosAcademicos as $gradoAcademico)
