@@ -39,7 +39,7 @@
 
 	
 	<div class="col-12">
-		<a class="nav-link" href="{{url('admin/documentos/crear/').'/'.$alumno->id}}">Crear Documento</a>
+		<a class="nav-link" href="{{url('admin/documentos/crear/').'/'.$alumno->id}}"><button type="button" class="btn btn-dark">Crear Documento</button></a>
 	</div>
 	<div class="col-12">
 
