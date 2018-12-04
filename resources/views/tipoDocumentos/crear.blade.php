@@ -6,7 +6,7 @@
 			<form action="{{url('admin/tipoDocumentos/creando')}}" method="POST">
 				@csrf
 				<fieldset>
-					<legend>Tipo de Documento</legend>
+					<legend>Crear tipo de Documento</legend>
 					<div class="form-group">
 				    	<label for=nombre>Nombre:</label>
 				    	<input type="text" class="form-control" name="nombre">

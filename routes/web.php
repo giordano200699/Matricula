@@ -49,7 +49,7 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::post('/admin/gradosAcademicos/editando/{id}','CGradoAcademico@editandoGradoAcademico');
 
 	Route::get('/admin/documentos','CDocumento@mostrarDocumentos');
-	Route::get('/admin/documentos/crear','CDocumento@crearDocumento');
+	Route::get('/admin/documentos/crear/{id}','CDocumento@crearDocumento');
 	Route::post('/admin/documentos/creando','CDocumento@creandoDocumento');
 });
 // Route::middleware('auth:auth')->get('/home', function (Request $request) {

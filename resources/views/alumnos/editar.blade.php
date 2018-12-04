@@ -1,6 +1,8 @@
 @extends('layouts.base')
 
 @section('content')
+	
+	
 
 	<form action="{{url('admin/alumnos/editando/'.$alumno->id)}}" method="POST">
 		@csrf

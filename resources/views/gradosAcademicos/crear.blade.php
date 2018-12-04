@@ -2,6 +2,8 @@
 
 @section('content')
 
+	
+
 	<form action="{{url('admin/gradosAcademicos/creando')}}" method="POST">
 		@csrf
 		<fieldset>
@@ -15,6 +17,5 @@
 			<input type="submit" value="Enviar Datos">
 		</fieldset>
 	</form>
-	<p>Hola Mundo</p>
 
 @endsection

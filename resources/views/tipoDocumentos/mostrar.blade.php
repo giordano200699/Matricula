@@ -2,10 +2,10 @@
 
 @section('content')
 
-	<h1>HOLA MUNDO</h1>
+	<div class="col-12"><h1>TIPO DE DOCUMENTOS</h1></div>
 
 	<table>
-		<caption>Mostrar Tipo de Documentos</caption>
+		<!--<caption>Mostrar Tipo de Documentos</caption> -->
 		<colgroup>
 			
 		</colgroup>
