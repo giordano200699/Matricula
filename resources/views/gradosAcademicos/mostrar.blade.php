@@ -9,7 +9,7 @@
 		<colgroup>
 			
 		</colgroup>
-		<thead>
+		<thead class="table-dark">
 		    <tr>
 		      <th scope="col">ID</th>
 		      <th scope="col">Nombre</th>

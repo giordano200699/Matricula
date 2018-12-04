@@ -7,7 +7,7 @@
 	<table class="table">
 		<!--<caption>Mostrar Tipo de Documentos</caption> -->
 		
-		<thead class="thead-light">
+		<thead class="table-dark">
 		    <tr>
 		      <th scope="col">ID</th>
 		      <th scope="col">Nombre</th>
