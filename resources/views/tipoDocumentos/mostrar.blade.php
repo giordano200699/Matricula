@@ -4,12 +4,10 @@
 
 	<div class="col-12"><h1>TIPO DE DOCUMENTOS</h1></div>
 
-	<table>
+	<table class="table">
 		<!--<caption>Mostrar Tipo de Documentos</caption> -->
-		<colgroup>
-			
-		</colgroup>
-		<thead>
+		
+		<thead class="table-dark">
 		    <tr>
 		      <th scope="col">ID</th>
 		      <th scope="col">Nombre</th>
@@ -25,7 +23,7 @@
 			      <th scope="row">{{$tipoDocumento->id}}</th>
 			      <td>{{$tipoDocumento->nombre}}</td>
 			      <td>{{$tipoDocumento->descripcion}}</td>
-			      <td><a href="{{url('admin/tipoDocumentos/editar/'.$tipoDocumento->id)}}">Editar</a></td>
+			      <td><a href="{{url('admin/tipoDocumentos/editar/'.$tipoDocumento->id)}}"><button type="button" class="btn btn-dark">Editar</button></a></td>
 			      <td><form action="{{url('admin/tipoDocumentos/eliminar')}}" method="POST">
 	  			@csrf<input type="hidden" name="id" value="{{$tipoDocumento->id}}"><input type="submit" value="Eliminar"></form></td>
 			    </tr>

@@ -34,31 +34,7 @@
 	</div>
 </div>
 
-<!--<div class="profile-data">
-	<div class="col-md-3">
-  	<div class="col-md-12" align="center">
-        			<img class="img-responsive img-portfolio img-hover" src="{{asset('imgPublications/images.png')}}">
-    </div>
-    <div class="col-md-12">
-			<p class="text-center"><strong>Nombres: {{$alumno->nombres}} </strong></p>
-	    <p class="text-center"><em>Apellidos: {{$alumno->apePaterno}} </em></p>
-      </div>
-    <div class="col-md-12 text-center">-->
-    	<!-- Redes sociales
-	    <ul class="list-unstyled list-inline list-social-icons">
-				<li>
-						<p>Codigo: {{$alumno->id}}</p>
-				</li>
-				<li>
-						<p>Estado: </p> <font color="green"> Disponible</font>
-				</li>
-			</ul>
-		 Fin redes sociales 
-		</div>-->
 
-
-
-<!-- </div> -->
 
 
 	
@@ -88,9 +64,9 @@
 						<div class="col-4">
 						<div class="card" style="width: 18rem;">
 						  <img class="card-img-top" src="{{asset('imgPublications/'.$documento->imgUrl)}}" alt="Card image cap">
-						  <div class="card-body">
-						    <h5 class="card-title">Card title</h5>
-						    <a href="#" class="btn btn-primary">Go somewhere</a>
+						  <div class="card-body" style="text-align: center;">
+						    <h5 class="card-title">{{$documento->tipoDocumento->nombre." - ".$documento->codigo}}</h5>
+						    <a href="{{url('admin/documentos/visualizar/').'/'.$documento->id}}" class="btn btn-primary">Visualizar</a>
 						  </div>
 						</div>
 						</div>

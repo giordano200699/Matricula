@@ -4,12 +4,12 @@
 	<div class="col-12"><h1>LISTA DE ALUMNOS</h1></div>
 	
 	<div class="col-12">
-		<table>
+		<table class="table">
 			<!--<caption>Mostrar Alumnos</caption>-->
 			<colgroup>
 				
 			</colgroup>
-			<thead>
+			<thead class="table-dark">
 			    <tr>
 			      <th scope="col">ID</th>
 			      <th scope="col">Nombres</th>
@@ -30,10 +30,10 @@
 				      <td>{{$alumno->apePaterno}}</td>
 				      <td>{{$alumno->apeMaterno}}</td>
 				      <td>{{$alumno->correo}}</td>
-				      <td><a href="{{url('admin/alumnos/editar/'.$alumno->id)}}">Editar</a></td>
+				      <td><a href="{{url('admin/alumnos/editar/'.$alumno->id)}}"><button type="button" class="btn btn-dark">Editar</button></a></td>
 				      <td><form action="{{url('admin/alumnos/eliminar')}}" method="POST">
 		  			@csrf<input type="hidden" name="id" value="{{$alumno->id}}"><input type="submit" value="Eliminar"></form></td>
-		  			<td><a href="{{url('admin/alumnos/visualizar/'.$alumno->id)}}">Visualizar</a></td>
+		  			<td><a href="{{url('admin/alumnos/visualizar/'.$alumno->id)}}"><button type="button" class="btn btn-dark">Visualizar</button></a></td>
 				    </tr>
 		  		
 		  		@endforeach

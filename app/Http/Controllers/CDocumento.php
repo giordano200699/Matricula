@@ -43,7 +43,31 @@ class CDocumento extends Controller
         }
         return "ERROR AL CREAR";
     }
+    public function visualizarDocumento($id){
+        $documento = Documento::find($id);
+        return view('documentos.visualizar',["documento"=>$documento]);
+    }
 
+    public function eliminarDocumento(Request $request){
+        $documento = Documento::find($request->id);
+        $idAlumno = $documento->alumno->id;
+        $documento->delete();
+        return redirect("admin/alumnos/visualizar/".$idAlumno);
+    }
+    public function editarDocumento($id){
+        $documento = Documento::find($id);
+        $tiposDocumentos = TipoDocumento::all();
+        return view('documentos.editar',["tiposDocumentos"=>$tiposDocumentos,"alumno"=>$documento->alumno,"documento"=>$documento]);
+    }
+    public function editandoDocumento(Request $request){
+        $documento = Documento::find($request->idDocumento);
+        $documento->idTipoDocumento = $request->tipoDocumento;
+        $documento->idAlumno = $request->idAlumno;
+        $documento->codigo = $request->codigo;
+        $documento->descripcion = $request->descripcion;
+        $documento->save();
+        return redirect("admin/alumnos/visualizar/".$request->idAlumno);
+    }
     /**
      * Show the form for creating a new resource.
      *

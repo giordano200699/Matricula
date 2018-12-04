@@ -52,6 +52,10 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::get('/admin/documentos','CDocumento@mostrarDocumentos');
 	Route::get('/admin/documentos/crear/{id}','CDocumento@crearDocumento');
 	Route::post('/admin/documentos/creando','CDocumento@creandoDocumento');
+	Route::get('/admin/documentos/visualizar/{id}','CDocumento@visualizarDocumento');
+	Route::post('/admin/documentos/eliminar','CDocumento@eliminarDocumento');
+	Route::get('/admin/documentos/editar/{id}','CDocumento@editarDocumento');
+	Route::post('/admin/documentos/editando','CDocumento@editandoDocumento');
 });
 // Route::middleware('auth:auth')->get('/home', function (Request $request) {
 //     return view('home');
