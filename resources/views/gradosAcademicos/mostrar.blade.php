@@ -27,7 +27,7 @@
 			      <td>{{$gradoAcademico->descripcion}}</td>
 			      <td><a href="{{url('admin/gradosAcademicos/editar/'.$gradoAcademico->id)}}"><button type="button" class="btn btn-dark">Editar</button></a></td>
 			      <td><form action="{{url('admin/gradosAcademicos/eliminar')}}" method="POST">
-	  			@csrf<input type="hidden" name="id" value="{{$gradoAcademico->id}}"><input type="submit" value="Eliminar"></form></td>
+	  			@csrf<input type="hidden" name="id" value="{{$gradoAcademico->id}}"><input type="submit" class="btn btn-dark" value="Eliminar"></form></td>
 			    </tr>
 	  		
 	  		@endforeach

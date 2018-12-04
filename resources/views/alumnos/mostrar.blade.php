@@ -32,7 +32,7 @@
 				      <td>{{$alumno->correo}}</td>
 				      <td><a href="{{url('admin/alumnos/editar/'.$alumno->id)}}"><button type="button" class="btn btn-dark">Editar</button></a></td>
 				      <td><form action="{{url('admin/alumnos/eliminar')}}" method="POST">
-		  			@csrf<input type="hidden" name="id" value="{{$alumno->id}}"><input type="submit" value="Eliminar"></form></td>
+		  			@csrf<input type="hidden" name="id" value="{{$alumno->id}}"><input type="submit" class="btn btn-dark" value="Eliminar"></form></td>
 		  			<td><a href="{{url('admin/alumnos/visualizar/'.$alumno->id)}}"><button type="button" class="btn btn-dark">Visualizar</button></a></td>
 				    </tr>
 		  		
