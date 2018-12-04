@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\TipoDocumento as TipoDocumento;
 use App\Documento as Documento;  
+use App\Alumno as Alumno;
 
 class CDocumento extends Controller
 {
@@ -20,9 +21,10 @@ class CDocumento extends Controller
     public function mostrarDocumentos(){
         dd("estas en mostrarDocumentos");
     }
-    public function crearDocumento(){
+    public function crearDocumento($id){
+        $alumno = Alumno::find($id);
         $tiposDocumentos = TipoDocumento::all();
-        return view('documentos.crear',["tiposDocumentos"=>$tiposDocumentos]);
+        return view('documentos.crear',["tiposDocumentos"=>$tiposDocumentos,"alumno"=>$alumno]);
     }
 
     public function creandoDocumento(Request $request)
@@ -31,11 +33,12 @@ class CDocumento extends Controller
         if($request->codigo!=null){
             Documento::create([
                 'idTipoDocumento' => $request->tipoDocumento,
+                'idAlumno'=> $request->idAlumno,
                 'codigo' => $request->codigo,
                 'descripcion'=>$request->descripcion,
                 'imgUrl'=> $request->urlImg
             ]);
-            return redirect("admin/documentos");
+            return redirect("admin/alumnos/visualizar/".$request->idAlumno);
         }
         return "ERROR AL CREAR";
     }

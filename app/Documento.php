@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Documento extends Model
 {
     protected $fillable = [
-        'idTipoDocumento','codigo', 'descripcion','imgUrl'
+        'idTipoDocumento','codigo', 'descripcion','imgUrl','idAlumno'
     ];
 
     public function setImgUrlAttribute($urlImg)
@@ -23,5 +23,9 @@ class Documento extends Model
     public function tipoDocumento()
     {
       return $this->belongsTo('App\TipoDocumento','idTipoDocumento');
+    }
+    public function alumno()
+    {
+      return $this->belongsTo('App\Alumno','idAlumno');
     }
 }
