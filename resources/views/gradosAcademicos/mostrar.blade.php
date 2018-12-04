@@ -2,9 +2,9 @@
 
 @section('content')
 	
-	<div class="col-12"><h1>GRADOS DE DOCUMENTO</h1></div>
+	<div class="col-12"><h1>GRADOS ACADÉMICOS</h1></div>
 
-	<table>
+	<table class="table">
 		<!--<caption>Mostrar Grados Académicos</caption>-->
 		<colgroup>
 			
@@ -25,7 +25,7 @@
 			      <th scope="row">{{$gradoAcademico->id}}</th>
 			      <td>{{$gradoAcademico->nombre}}</td>
 			      <td>{{$gradoAcademico->descripcion}}</td>
-			      <td><a href="{{url('admin/gradosAcademicos/editar/'.$gradoAcademico->id)}}">Editar</a></td>
+			      <td><a href="{{url('admin/gradosAcademicos/editar/'.$gradoAcademico->id)}}"><button type="button" class="btn btn-dark">Editar</button></a></td>
 			      <td><form action="{{url('admin/gradosAcademicos/eliminar')}}" method="POST">
 	  			@csrf<input type="hidden" name="id" value="{{$gradoAcademico->id}}"><input type="submit" value="Eliminar"></form></td>
 			    </tr>
