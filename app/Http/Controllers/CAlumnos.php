@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Alumno as Alumno; 
 use App\GradoAcademico as GradoAcademico; 
+use App\TipoDocumento as TipoDocumento;
 use Redirect;
 
 class CAlumnos extends Controller
@@ -59,7 +60,18 @@ class CAlumnos extends Controller
     {
         $alumno = Alumno::find($id);
         $gradosAcademicos = GradoAcademico::all();
-        return view('alumnos.visualizar',["alumno"=>$alumno,"gradosAcademicos"=>$gradosAcademicos]);
+        foreach($gradosAcademicos as $gradoAcademico){
+            $matriz[$gradoAcademico->id]=array();
+        }
+        foreach($alumno->documentos as $documento){
+            foreach($gradosAcademicos as $gradoAcademico){
+                if($documento->tipoDocumento->idGradoAcademico == $gradoAcademico->id){
+                    $matriz[$gradoAcademico->id][count($matriz[$gradoAcademico->id])]=$documento;
+                    break;
+                }
+            }
+        }
+        return view('alumnos.visualizar',["alumno"=>$alumno,"gradosAcademicos"=>$gradosAcademicos,"matriz"=>$matriz]);
     }
     public function editandoAlumno(Request $request)
     {

@@ -4,7 +4,7 @@
 	<div class="col-12">
 		<a class="nav-link" href="{{url('admin/documentos/crear/').'/'.$alumno->id}}">Crear Documento</a>
 	</div>
-	<div class="col-6">
+	<div class="col-12">
 		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 			@foreach($gradosAcademicos as $gradoAcademico)
 				@if($gradoAcademico->id == $gradosAcademicos[0]->id)
@@ -21,12 +21,18 @@
 		<div class="tab-content" id="pills-tabContent">
 			@foreach($gradosAcademicos as $gradoAcademico)
 					<div class="tab-pane fade @if($gradoAcademico->id == $gradosAcademicos[0]->id) show active @endif " id="pills-a{{$gradoAcademico->id}}" role="tabpanel" aria-labelledby="pills-a{{$gradoAcademico->id}}-tab" style="background-color: white;">
+						<div class="row">
+						@foreach($matriz[($gradoAcademico->id)] as $documento)
+						<div class="col-4">
 						<div class="card" style="width: 18rem;">
-						  <img class="card-img-top" src="{{asset('imgPublications/39de9b272b9bc0b2fa22bb27588b4ed62648e598_hq.jpg')}}" alt="Card image cap">
+						  <img class="card-img-top" src="{{asset('imgPublications/'.$documento->imgUrl)}}" alt="Card image cap">
 						  <div class="card-body">
 						    <h5 class="card-title">Card title</h5>
 						    <a href="#" class="btn btn-primary">Go somewhere</a>
 						  </div>
+						</div>
+						</div>
+						@endforeach
 						</div>
 					</div>	
 			@endforeach

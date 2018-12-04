@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\TipoDocumento as TipoDocumento;
 use App\Documento as Documento;  
 use App\Alumno as Alumno;
+use App\GradoAcademico as GradoAcademico;
 
 class CDocumento extends Controller
 {
