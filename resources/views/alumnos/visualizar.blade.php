@@ -21,7 +21,7 @@
 						<div class="card" style="width: 18rem;">
 						  <img class="card-img-top" src="{{asset('imgPublications/39de9b272b9bc0b2fa22bb27588b4ed62648e598_hq.jpg')}}" alt="Card image cap">
 						  <div class="card-body">
-						    <h5 class="card-title">Card title</h5>
+						    <h5 class="card-title">Documento</h5>
 						    <a href="#" class="btn btn-primary">Go somewhere</a>
 						  </div>
 						</div>

@@ -2,10 +2,8 @@
 
 @section('content')
 
-	<h1>HOLA MUNDO</h1>
-
 	<table>
-		<caption>Mostrar Alumnos</caption>
+		<caption>Mostrar Alumno</caption>
 		<colgroup>
 			
 		</colgroup>
