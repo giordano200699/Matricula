@@ -11,7 +11,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="bio-image">
-							<img src="{{asset('imgPublications/images.png')}}" alt="image" />
+							<img src="{{asset('imgUsuarios/'.$alumno->imgUrl)}}" alt="image" width="200px;" />
 							<br>
 							<br>
 	

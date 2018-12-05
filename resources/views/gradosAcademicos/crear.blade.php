@@ -14,7 +14,7 @@
 			<label>Descripción:</label>
 			<input type="text" name="descripcion">
 			<br/>
-			<input type="submit" value="Enviar Datos">
+			<input type="submit" class="btn btn-success" value="Enviar Datos">
 		</fieldset>
 	</form>
 

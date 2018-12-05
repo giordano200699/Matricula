@@ -12,7 +12,7 @@
 			<label>Descripción:</label>
 			<textarea name="descripcion">{{$gradoAcademico->descripcion}}</textarea>
 			<br/>
-			<input type="submit" value="Enviar Datos">
+			<input type="submit" class="btn btn-success" value="Enviar Datos">
 		</fieldset>
 	</form>
 

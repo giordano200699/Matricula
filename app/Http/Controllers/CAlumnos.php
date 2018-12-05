@@ -38,7 +38,8 @@ class CAlumnos extends Controller
                 'nombres' => $request->nombres,
                 'apePaterno' => $request->apePaterno,
                 'apeMaterno' => $request->apeMaterno,
-                'correo' => $request->correo
+                'correo' => $request->correo,
+                'imgUrl'=> $request->urlImg
             ]);
             return redirect("admin/alumnos");
             return "true";
@@ -60,6 +61,7 @@ class CAlumnos extends Controller
     {
         $alumno = Alumno::find($id);
         $gradosAcademicos = GradoAcademico::all();
+        $matriz=null;
         foreach($gradosAcademicos as $gradoAcademico){
             $matriz[$gradoAcademico->id]=array();
         }
