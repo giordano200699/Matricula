@@ -3,7 +3,7 @@
 @section('content')
 
 	
-		<form action="{{url('admin/alumnos/creando')}}" method="POST">
+		<form action="{{url('admin/alumnos/creando')}}" method="POST" enctype="multipart/form-data" files="true">
 			@csrf
 			<fieldset>
 				<div class="form-group row">
@@ -12,26 +12,35 @@
 				<div class="form-group row">
   					<label for="example-tel-input" class="col-sm col-form-label">Nombres:</label>
   					<div class="col-sm-13">
-				    	<input class="form-control" type="tel" value="" id="example-tel-input">
+				    	<input class="form-control" type="tel" value="" id="example-tel-input" name="nombres">
 				  	</div>
 				</div>
 				<div class="form-group row">
   					<label for="example-tel-input" class="col-sm col-form-label">Apellido Paterno:</label>
   					<div class="col-sm-13">
-				    	<input class="form-control" type="tel" value="" id="example-tel-input">
+				    	<input class="form-control" type="tel" value="" id="example-tel-input" name="apePaterno">
 				  	</div>
 				</div>
 				<div class="form-group row">
   					<label for="example-tel-input" class="col-sm col-form-label">Apellido Materno</label>
   					<div class="col-sm-13">
-				    	<input class="form-control" type="tel" value="" id="example-tel-input">
+				    	<input class="form-control" type="tel" value="" id="example-tel-input" name="apeMaterno">
 				  	</div>
 				</div>
 				<div class="form-group row">
   					<label for="example-tel-input" class="col-sm col-form-label">Correo:</label>
   					<div class="col-sm-13">
-				    	<input class="form-control" type="tel" value="" id="example-tel-input">
+				    	<input class="form-control" type="tel" value="" id="example-tel-input" name="correo">
 				  	</div>
+				</div>
+				<div class="form-group row">
+				   <label for="archivo" class="col-sm col-form-label">Imagen:</label>
+				   <div class="btn btn-default btn-file">
+						<i class="fa fa-paperclip"></i> Seleccionar archivo <input
+							type="file" name="urlImg" id="archivo" class="form-control"
+							onchange="funcion()">
+					</div>
+					<span class=" inline">Max. 32MB</span>
 				</div>
 				<div class="form-group row">
 					<input type="submit" class="btn btn-success" value="Enviar Datos">
