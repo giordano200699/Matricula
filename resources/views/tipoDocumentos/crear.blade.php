@@ -32,7 +32,4 @@
 			</form>
 		</div>
 
-
-	
-
 @endsection
