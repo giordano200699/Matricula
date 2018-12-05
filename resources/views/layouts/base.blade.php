@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ asset('base/css/simple-sidebar.css') }}" rel="stylesheet">
     <!-- <link rel="stylesheet" href="{{ asset('base/css/Searchbar.css') }}"> -->
+    <link rel="stylesheet" href="{{ asset('base/css/mrtnCSS/search.css')}}">
     <link rel="stylesheet" href="{{ asset('base/css/4-col-portfolio.css') }}">
     <link rel="stylesheet" href="{{ asset('base/css/Navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('base/css/mrtnCSS/bio.css')}} ">
@@ -124,15 +125,15 @@
     
     function myFunction() {
     // Declare variables
+    console.log("Hola");
     var input, filter, ul, li, a, i;
-    input = document.getElementById("mySearch");
+    input = document.getElementById("search");
     filter = input.value.toUpperCase();
-    ul = document.getElementsByClassName("row");
-    li = document.getElementsByClassName("col-lg-3 col-md-4 col-sm-6 portfolio-item")
+    li = document.getElementsByClassName("card")
 
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("h4")[0];
+        a = li[i].getElementsByTagName("h5")[0];
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
         } else {

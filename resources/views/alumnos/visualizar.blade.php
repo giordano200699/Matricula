@@ -21,8 +21,6 @@
 			</div>
 			<div class="col-md-6">
 				<div class="bio-content">
-				
-				
 				<p><strong>Nombres: {{$alumno->nombres}} </strong></p>
 	   			 <p >Apellidos: {{$alumno->apePaterno}} </p>
 					<p>Codigo: {{$alumno->id}}</p>
@@ -33,16 +31,13 @@
 		</div>	
 	</div>
 </div>
-
-
-
-
-	
-	<div class="col-12">
-		<a class="nav-link" href="{{url('admin/documentos/crear/').'/'.$alumno->id}}"><button type="button" class="btn btn-dark">Crear Documento</button></a>
+	<div id="searchbar">
+			<form action="" autocomplete="on">
+				<input id="search" name="search" type="text" onkeyup="myFunction()"  placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+			</form>
 	</div>
+<div class="col-12">
 	<div class="col-12">
-
 		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 			@foreach($gradosAcademicos as $gradoAcademico)
 				@if($gradoAcademico->id == $gradosAcademicos[0]->id)
@@ -56,6 +51,7 @@
 				@endif
 			@endforeach
 		</ul>
+		
 		<div class="tab-content" id="pills-tabContent">
 			@foreach($gradosAcademicos as $gradoAcademico)
 					<div class="tab-pane fade @if($gradoAcademico->id == $gradosAcademicos[0]->id) show active @endif " id="pills-a{{$gradoAcademico->id}}" role="tabpanel" aria-labelledby="pills-a{{$gradoAcademico->id}}-tab" style="background-color: white;">
@@ -78,5 +74,7 @@
 		</div>
 
 	</div>
+	
+</div>
 
 @endsection

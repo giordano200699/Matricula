@@ -11,27 +11,27 @@
 				<legend>Alumno: {{$alumno->nombres}} {{$alumno->apePaterno}} {{$alumno->apeMaterno}}</legend>
 			</div>
 			<div class="form-group row">
-					<label for="example-tel-input" class="col-sm col-form-label">Nombres:</label>
-					<div class="col-sm-13">
-			    	<input class="form-control" type="tel" value="{{$alumno->nombres}}" id="example-tel-input">
+				<label for="example1" class="col-sm col-form-label">Nombres:</label>
+				<div class="col-sm-13">
+			    	<input class="form-control" value="{{$alumno->nombres}}" id="example1">
 			  	</div>
 			</div>
 			<div class="form-group row">
-					<label for="example-tel-input" class="col-sm col-form-label">Apellido Paterno:</label>
-					<div class="col-sm-13">
-			    	<input class="form-control" type="tel" value="{{$alumno->apePaterno}}" id="example-tel-input">
+				<label for="example2" class="col-sm col-form-label">Apellido Paterno:</label>
+				<div class="col-sm-13">
+			    	<input class="form-control" value="{{$alumno->apePaterno}}" id="2">
 			  	</div>
 			</div>
 			<div class="form-group row">
-					<label for="example-tel-input" class="col-sm col-form-label">Apellido Materno</label>
-					<div class="col-sm-13">
-			    	<input class="form-control" type="tel" value="{{$alumno->apeMaterno}}" id="example-tel-input">
+				<label for="example3" class="col-sm col-form-label">Apellido Materno</label>
+				<div class="col-sm-13">
+			    	<input class="form-control" value="{{$alumno->apeMaterno}}" id="example3">
 			  	</div>
 			</div>
 			<div class="form-group row">
-					<label for="example-tel-input" class="col-sm col-form-label">Correo:</label>
-					<div class="col-sm-13">
-			    	<input class="form-control" type="tel" value="{{$alumno->correo}}" id="example-tel-input">
+				<label for="example4" class="col-sm col-form-label">Correo:</label>
+				<div class="col-sm-13">
+			    	<input class="form-control" value="{{$alumno->correo}}" id="example4">
 			  	</div>
 			</div>
 			<div class="form-group row">
