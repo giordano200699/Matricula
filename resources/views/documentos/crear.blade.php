@@ -11,10 +11,12 @@
 				<legend>Crear Documento</legend>
 				<input type="hidden" id="idAlumno" name="idAlumno" value="{{$alumno->id}}">
 
-				<div class="form-group">
-			    	<label for="codigo">Codigo:</label>
-			    	<input type="text" class="form-control" name="codigo">
-			 	</div>
+			 	<div class="form-group row">
+						<label for="example1" class="col-sm col-form-label">Código:</label>
+						<div class="col-sm-12">
+					    	<input class="form-control"  id="example1" name="codigo">
+					  	</div>
+					</div>
 
 			 	<div class="form-group">
 			    	<label for="descripcion">Descripción:</label>

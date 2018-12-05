@@ -47,7 +47,8 @@ class CTipoDocumento extends Controller
     public function editarTipoDocumento($id)
     {
         $tipoDocumento = TipoDocumento::find($id);
-        return view('tipoDocumentos.editar',["tipoDocumento"=>$tipoDocumento]);
+        $gradosAcademicos = GradoAcademico::all();
+        return view('tipoDocumentos.editar',["tipoDocumento"=>$tipoDocumento,"gradosAcademicos"=>$gradosAcademicos]);
     }
     public function editandoTipoDocumento(Request $request)
     {

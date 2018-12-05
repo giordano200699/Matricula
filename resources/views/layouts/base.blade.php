@@ -47,7 +47,7 @@
                   <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                       <li class="nav-item">
-                        <a class="nav-link" href="#">My Profile</a>
+                        <a class="nav-link" href="{{url('/admin/alumnos')}}">My Profile</a>
                       </li>
                      
                       <li class="nav-item">
@@ -133,7 +133,7 @@
 
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("h5")[0];
+        a = li[i].getElementsByTagName("h6")[0];
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
         } else {

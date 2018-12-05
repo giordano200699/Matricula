@@ -11,7 +11,7 @@
 				<div class="form-group ">
 					<label for="example1" class="col-sm col-form-label">Nombres:</label>
 						<div class="col-sm-13">
-				    	<input class="form-control" value="{{$gradoAcademico->nombre}}" id="example1">
+				    	<input class="form-control" value="{{$gradoAcademico->nombre}}" id="example1" name="nombre">
 				  	</div>
 				</div>
 				<div class="form-group ">
