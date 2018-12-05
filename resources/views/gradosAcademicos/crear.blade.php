@@ -13,13 +13,13 @@
 				<div class="form-group row">
 					<label for="example1" class="col-sm col-form-label">Nombre:</label>
 					<div class="col-sm-13">
-				    	<input class="form-control"  id="example1">
+				    	<input class="form-control"  id="example1" name="nombre">
 				  	</div>
 				</div>
 				<div class="form-group row">
 					<label for="example2" class="col-sm col-form-label">Descripcion:</label>
 					<div class="col-sm-13">
-				    	<input class="form-control"  id="example2">
+				    	<input class="form-control"  id="example2" name="descripcion">
 				  	</div>
 				</div>
 				<div class="form-group row">
