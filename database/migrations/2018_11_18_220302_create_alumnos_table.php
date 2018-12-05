@@ -19,6 +19,7 @@ class CreateAlumnosTable extends Migration
             $table->string('apePaterno', 100);
             $table->string('apeMaterno', 100);
             $table->string('correo', 150);
+            $table->string('imgUrl')->nullable();
             $table->timestamps();
         });
     }

@@ -51,6 +51,10 @@ return [
            'driver' => 'local',
            'root' => public_path('imgPublications')
         ],
+        'localUsuarios' => [
+           'driver' => 'local',
+           'root' => public_path('imgUsuarios')
+        ],
 
         'public' => [
             'driver' => 'local',
