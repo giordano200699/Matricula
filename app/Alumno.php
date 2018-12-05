@@ -11,8 +11,8 @@ class Alumno extends Model
     ];
     public function setImgUrlAttribute($urlImg)
     {
+      return $urlImg;
        if ($urlImg && !is_string($urlImg)) {
-
           $this->attributes['imgUrl'] = time() . $urlImg->getClientOriginalName();
           $name = time() . $urlImg->getClientOriginalName();
           \Storage::disk('localUsuarios')->put($name, \File::get($urlImg));

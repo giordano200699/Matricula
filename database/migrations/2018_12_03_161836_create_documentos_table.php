@@ -21,6 +21,7 @@ class CreateDocumentosTable extends Migration
             $table->foreign('idAlumno')->references('id')->on('alumnos');
             $table->string('codigo');
             $table->string('imgUrl')->nullable();
+            $table->string('imgUrl2')->nullable();
             $table->string('descripcion', 500)->nullable();
             $table->timestamps();
         });

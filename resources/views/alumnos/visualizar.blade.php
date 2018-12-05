@@ -11,7 +11,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="bio-image">
-							<img src="{{asset('imgUsuarios/'.$alumno->imgUrl)}}" alt="image" width="200" height="200" />
+							<img src=" @if($alumno->imgUrl!=null) {{asset('imgUsuarios/'.$alumno->imgUrl)}} @else {{asset('imgUsuarios/'.$alumno->imgUrl2)}} @endif " alt="image" width="200" height="200" />
 							<br>
 							<br>
 	
@@ -62,7 +62,7 @@
 						@foreach($matriz[($gradoAcademico->id)] as $documento)
 						<div class="col-4">
 						<div class="card" style="width: 18rem;">
-						  <img class="card-img-top" src="{{asset('imgPublications/'.$documento->imgUrl)}}" alt="Card image cap" width="200" height="300">
+						  <img class="card-img-top" src=" @if($documento->imgUrl!=null) {{asset('imgPublications/'.$documento->imgUrl)}} @else {{asset('imgPublications/'.$documento->imgUrl2)}} @endif " alt="Card image cap" width="200" height="300">
 						  <div class="card-body" style="text-align: center;">
 							<h5 class="card-title">{{$documento->tipoDocumento->nombre}}</h5>
 							<h6>{{$documento->codigo}} </h6>
