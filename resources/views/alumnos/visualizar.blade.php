@@ -64,7 +64,8 @@
 						<div class="card" style="width: 18rem;">
 						  <img class="card-img-top" src="{{asset('imgPublications/'.$documento->imgUrl)}}" alt="Card image cap">
 						  <div class="card-body" style="text-align: center;">
-						    <h5 class="card-title">{{$documento->tipoDocumento->nombre." - ".$documento->codigo}}</h5>
+							<h5 class="card-title">{{$documento->tipoDocumento->nombre}}</h5>
+							<h6>{{$documento->codigo}} </h6>
 						    <a href="{{url('admin/documentos/visualizar/').'/'.$documento->id}}" class="btn btn-primary">Visualizar</a>
 						  </div>
 						</div>
