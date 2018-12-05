@@ -7,10 +7,12 @@
 				@csrf
 				<fieldset>
 					<legend>Crear tipo de Documento</legend>
-					<div class="form-group">
-				    	<label for=nombre>Nombre:</label>
-				    	<input type="text" class="form-control" name="nombre">
-				 	</div>
+					<div class="form-group row">
+						<label for="example1" class="col-sm col-form-label">Nombre:</label>
+						<div class="col-sm-10">
+					    	<input class="form-control"  id="example1">
+					  	</div>
+					</div>
 					<div class="form-group">
 					    <label for="idGradoAcademico">Grado Académico:</label>
 					    <select class="form-control" id="gradoAcademico" name="idGradoAcademico">
