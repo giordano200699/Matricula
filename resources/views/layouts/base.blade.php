@@ -46,12 +46,9 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                      <li class="nav-item">
-                        <a class="nav-link" href="{{url('/admin/alumnos')}}">My Profile</a>
-                      </li>
                      
                       <li class="nav-item">
-                        <a class="nav-link" href="{{url('/logout')}}">Logout</a>
+                        <a class="nav-link" href="{{url('/logout')}}">Cerrar Sesión</a>
                       </li>
                     </ul>
                   </div>
