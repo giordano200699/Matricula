@@ -33,8 +33,11 @@
 </div>
 	<div id="searchbar">
 			<form action="" autocomplete="on">
-				<input id="search" name="search" type="text" onkeyup="myFunction()"  placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+				<input id="search" name="search" type="text" onkeyup="myFunction()"  placeholder="Realiza tu búsqueda"><input id="search_submit" value="Rechercher" type="submit">
 			</form>
+	</div>
+	<div class="col-12">
+		<a class="nav-link" href="{{url('admin/documentos/crear/').'/'.$alumno->id}}"><button type="button" class="btn btn-dark">Crear Documento</button></a>
 	</div>
 <div class="col-12">
 	<div class="col-12">

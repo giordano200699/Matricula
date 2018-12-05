@@ -8,18 +8,25 @@
 				
 				<legend>Editar Tipo de documento: {{$tipoDocumento->nombre}}</legend>
 				
-				<div class="form-group ">
-					<label for="example1" class="col-sm col-form-label">Nombre:</label>
-						<div class="col-sm-13">
-				    	<input class="form-control" value="{{$tipoDocumento->nombre}}" id="example1">
-				  	</div>
-				</div>
-				<div class="form-group ">
-					<label for="example2" class="col-sm col-form-label">Descripción:</label>
-					
-				   		<textarea class="form-control " id="example2" name="descripcion" rows="3">{{$tipoDocumento->descripcion}}</textarea>
-				   	
-				</div>
+				<div class="form-group row">
+						<label for="example1" class="col-sm col-form-label">Nombre:</label>
+						<div class="col-sm-10">
+					    	<input class="form-control"  id="example1" name="nombre" value="{{$tipoDocumento->nombre}}">
+					  	</div>
+					</div>
+				<div class="form-group">
+				    <label for="idGradoAcademico">Grado Académico:</label>
+				    <select class="form-control" id="gradoAcademico" name="idGradoAcademico">
+				     	@foreach($gradosAcademicos as $gradoAcademico)
+							<option value="{{$gradoAcademico->id}}" @if($gradoAcademico->id==$tipoDocumento->idGradoAcademico) selected @endif >{{$gradoAcademico->nombre}}</option>
+						@endforeach
+		   			</select>
+			  	</div>
+
+				<div class="form-group">
+			    	<label for="descripcion">Descripción:</label>
+		   			<textarea class="form-control" id="descripcion" name="descripcion" rows="3">{{$tipoDocumento->descripcion}}</textarea>
+			  	</div>
 
 				<input type="submit" class="btn btn-success" value="Enviar Datos">
 			</fieldset>

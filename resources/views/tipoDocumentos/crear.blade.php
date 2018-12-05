@@ -10,7 +10,7 @@
 					<div class="form-group row">
 						<label for="example1" class="col-sm col-form-label">Nombre:</label>
 						<div class="col-sm-10">
-					    	<input class="form-control"  id="example1">
+					    	<input class="form-control"  id="example1" name="nombre">
 					  	</div>
 					</div>
 					<div class="form-group">
