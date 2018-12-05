@@ -1,18 +1,18 @@
 .portfolio{
-    padding:6%;
+    
     text-align:center;
 }
 .heading{
     background: #fff;
-    padding: 1%;
+    padding: 10%;
     text-align: left;
     
 }
 .heading img{
-    width: 10%;
+    width: 1%;
 }
 .bio-info{
-    padding: 5%;
+    padding: 1%;
     background:#fff;
     
 }
@@ -31,7 +31,7 @@
     
 }
 .bio-content p{
-    margin-top:  0.5rem;
+    margin-top:  0.1rem;
     font-weight:0;
     font-size:20px;
 }
