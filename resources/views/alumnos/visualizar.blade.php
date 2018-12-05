@@ -11,7 +11,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="bio-image">
-							<img src="{{asset('imgUsuarios/'.$alumno->imgUrl)}}" alt="image" width="200px;" />
+							<img src="{{asset('imgUsuarios/'.$alumno->imgUrl)}}" alt="image" width="200" height="200" />
 							<br>
 							<br>
 	
@@ -31,7 +31,7 @@
 		</div>	
 	</div>
 </div>
-	<div id="searchbar">
+	<div id="searchbar" style="margin-top: 0px; margin-bottom: 0px;">
 			<form action="" autocomplete="on">
 				<input id="search" name="search" type="text" onkeyup="myFunction()"  placeholder="Realiza tu búsqueda"><input id="search_submit" value="Rechercher" type="submit">
 			</form>
@@ -62,7 +62,7 @@
 						@foreach($matriz[($gradoAcademico->id)] as $documento)
 						<div class="col-4">
 						<div class="card" style="width: 18rem;">
-						  <img class="card-img-top" src="{{asset('imgPublications/'.$documento->imgUrl)}}" alt="Card image cap">
+						  <img class="card-img-top" src="{{asset('imgPublications/'.$documento->imgUrl)}}" alt="Card image cap" width="200" height="300">
 						  <div class="card-body" style="text-align: center;">
 							<h5 class="card-title">{{$documento->tipoDocumento->nombre}}</h5>
 							<h6>{{$documento->codigo}} </h6>

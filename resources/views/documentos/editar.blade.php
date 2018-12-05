@@ -8,7 +8,7 @@
 		<form action="{{url('admin/documentos/editando')}}" method="POST" enctype="multipart/form-data" files="true">
 			@csrf
 			<fieldset>
-				<legend>Crear Documento</legend>
+				<legend>Editar Documento</legend>
 				<input type="hidden" id="idDocumento" name="idDocumento" value="{{$documento->id}}">
 				<input type="hidden" id="idAlumno" name="idAlumno" value="{{$alumno->id}}">
 
